@@ -14,14 +14,15 @@ Summary: Add simple and pretty shortcuts to the django admin homepage.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/django-admin-shortcuts-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/django-admin-shortcuts-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/django-admin-shortcuts-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/django-admin-shortcuts-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/django-admin-shortcuts-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/django-admin-shortcuts-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/django-admin-shortcuts-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/django-admin-shortcuts-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/django-admin-shortcuts/badges/version.svg)](https://anaconda.org/conda-forge/django-admin-shortcuts)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/django-admin-shortcuts/badges/downloads.svg)](https://anaconda.org/conda-forge/django-admin-shortcuts)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-django--admin--shortcuts-green.svg)](https://anaconda.org/conda-forge/django-admin-shortcuts) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/django-admin-shortcuts.svg)](https://anaconda.org/conda-forge/django-admin-shortcuts) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/django-admin-shortcuts.svg)](https://anaconda.org/conda-forge/django-admin-shortcuts) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/django-admin-shortcuts.svg)](https://anaconda.org/conda-forge/django-admin-shortcuts) |
 
 Installing django-admin-shortcuts
 =================================
@@ -66,6 +67,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
