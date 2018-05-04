@@ -5,18 +5,17 @@ package:
   version: {{ version }}
 
 source:
-  fn: django-admin-shortcuts-{{ version }}.tar.gz
   url: https://github.com/alesdotio/django-admin-shortcuts/archive/{{ version }}.tar.gz
   sha256: 4f7307bd3c804ba417bf0eb19cd4223b769dc1f78ab8651270d7741e3d2fd341
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
     - django >=1.2
   run:
     - python
