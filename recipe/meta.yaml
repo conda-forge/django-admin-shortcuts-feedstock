@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: django-admin-shortcuts
@@ -6,15 +6,15 @@ package:
 
 source:
   url: https://github.com/alesdotio/django-admin-shortcuts/archive/{{ version }}.tar.gz
-  sha256: 4f7307bd3c804ba417bf0eb19cd4223b769dc1f78ab8651270d7741e3d2fd341
+  sha256: 84bd177e99b0cd003406eb53f2befb4ed9d0823d1871cc48694312bdef352203
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - django >=1.2
