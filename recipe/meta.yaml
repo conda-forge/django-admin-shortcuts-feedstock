@@ -1,35 +1,39 @@
+{% set name = "django-admin-shortcuts" %}
 {% set version = "2.1.0" %}
 
 package:
-  name: django-admin-shortcuts
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/alesdotio/django-admin-shortcuts/archive/{{ version }}.tar.gz
-  sha256: 84bd177e99b0cd003406eb53f2befb4ed9d0823d1871cc48694312bdef352203
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-admin-shortcuts-{{ version }}.tar.gz
+  sha256: 0d598e612a0460c90e1167c0f7007c12725706f48a0f27983d96c01a2fe39c95
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
-    - django >=1.2
   run:
-    - python
+    - python >=3.6
     - django >=1.2
 
 test:
   imports:
     - admin_shortcuts
     - admin_shortcuts.templatetags
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/alesdotio/django-admin-shortcuts
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: 'Add simple and pretty shortcuts to the django admin homepage.'
 
