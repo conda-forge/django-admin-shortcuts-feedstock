@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-admin-sh
 
 Home: https://github.com/alesdotio/django-admin-shortcuts
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Summary: Add simple and pretty shortcuts to the django admin homepage.
 
