@@ -1,5 +1,5 @@
 {% set name = "django-admin-shortcuts" %}
-{% set version = "2.1.1" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-admin-shortcuts-{{ version }}.tar.gz
-  sha256: 0e667aa4fc5a0b4a4043e6d5a905305b32631322968f34a94a12ad66bd956587
+  sha256: 2a5eecb382b27c6d0c36057bcbcd7dd7d0bf1e6f92006cf723ef049fc999585b
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - django >=1.2
+    - python >=3.7
+    - django >=5.0
 
 test:
   imports:
